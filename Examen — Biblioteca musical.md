@@ -75,7 +75,28 @@ Métodos:
 - `__eq__` compara por `id`.
 
 **Teoría.** La duración se guarda en segundos enteros y `duracion_mmss` la calcula. Explicar en dos oraciones por qué conviene guardarla así y no en un string `"5:16"`.
+class Cancion:
+    def __init__(self, id, titulo, artista, album, genero, anio, duracion_seg):
+        self.id = id
+        self.titulo = titulo
+        self.artista = artista
+        self.album = album 
+        self.genero = genero
+        self.anio = anio
+        self.duracion_seg = duracion_seg
+    def duracion_mss(sef):
+        minutos = sel.duracion_seg // 60
+        segundos = self.duracion_seg % 60
+        return f"{minutos]:{segundos:02d}
+    def __str_(self):
+        return (f"#{self.id} {self.titulo} | {self.artista} | "
+                f"{se3f.anio} | {self.duracion_mss()}")
+    def __eq__(self, otra):
+        if not instance(otra, Cancion):
+            return NotImplemented
+        return self.id == otra.id
 
+#Conviene guardarla asi porque porque facilita las operaciones matematicas.
 
 ---
 
